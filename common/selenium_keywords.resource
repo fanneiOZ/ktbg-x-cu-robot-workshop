@@ -3,7 +3,8 @@ Library  SeleniumLibrary  run_on_failure=Capture Page Screenshot
 
 *** Variables ***
 # ${CHROME_DRIVER_PATH}    ${EXECDIR}${/}drivers${/}win32${/}chromedriver_80
-${CHROME_DRIVER_PATH}    ${EXECDIR}${/}drivers${/}mac64${/}chromedriver_80
+#${CHROME_DRIVER_PATH}    ${EXECDIR}${/}drivers${/}mac64${/}chromedriver_80
+${CHROME_DRIVER_PATH}    ${EXECDIR}${/}drivers${/}linux${/}chromedriver
 ${text_message}          ${EMPTY}
 ${text_encrypted}        ${EMPTY}
 ${generated_concat}      ${EMPTY}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0 (Python 3.8.1 on darwin)" generated="20210803 15:11:07.232" rpa="false" schemaversion="2">
-<suite id="s1" name="Lab Ui" source="/Users/phonkornkrit.p/Projects/ae-lab-cu/workspace/lab_ui/lab_ui.robot">
+<robot generator="Robot 4.1 (Python 3.8.0 on linux)" generated="20210807 16:41:40.070" rpa="false" schemaversion="2">
+<suite id="s1" name="Lab Ui" source="/home/funnyfeb/developments/repos/ae-lab-cu/workspace/lab_ui/lab_ui.robot">
 <test id="s1-t1" name="TC_001 : TEST AUTOMATION UI LEVEL">
 <kw name="Create Chrome Webdriver" library="selenium_keywords">
 <arg>${URL}</arg>
@@ -8,15 +8,15 @@
 <kw name="Log To Console" library="BuiltIn">
 <arg>------</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210803 15:11:07.578" endtime="20210803 15:11:07.578"/>
+<status status="PASS" starttime="20210807 16:41:40.206" endtime="20210807 16:41:40.206"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${chrome_options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20210803 15:11:07.579" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fa4a7182fa0&gt;</msg>
-<status status="PASS" starttime="20210803 15:11:07.578" endtime="20210803 15:11:07.579"/>
+<msg timestamp="20210807 16:41:40.207" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f71815a90d0&gt;</msg>
+<status status="PASS" starttime="20210807 16:41:40.206" endtime="20210807 16:41:40.207"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
@@ -24,82 +24,169 @@
 <arg>useAutomationExtension</arg>
 <arg>${False}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20210803 15:11:07.579" endtime="20210803 15:11:07.579"/>
+<status status="PASS" starttime="20210807 16:41:40.207" endtime="20210807 16:41:40.207"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--test-type</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20210803 15:11:07.579" endtime="20210803 15:11:07.580"/>
+<status status="PASS" starttime="20210807 16:41:40.207" endtime="20210807 16:41:40.207"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--ignore-certificate-errors</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20210803 15:11:07.580" endtime="20210803 15:11:07.580"/>
+<status status="PASS" starttime="20210807 16:41:40.207" endtime="20210807 16:41:40.207"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20210803 15:11:07.580" endtime="20210803 15:11:07.580"/>
+<status status="PASS" starttime="20210807 16:41:40.208" endtime="20210807 16:41:40.208"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${chrome_options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20210803 15:11:07.580" endtime="20210803 15:11:07.581"/>
+<status status="PASS" starttime="20210807 16:41:40.208" endtime="20210807 16:41:40.208"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${kwargs}</var>
 <arg>executable_path=${driver_path}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210803 15:11:07.581" level="INFO">${kwargs} = {'executable_path': '/Users/phonkornkrit.p/Projects/ae-lab-cu/drivers/mac64/chromedriver_80'}</msg>
-<status status="PASS" starttime="20210803 15:11:07.581" endtime="20210803 15:11:07.581"/>
+<msg timestamp="20210807 16:41:40.208" level="INFO">${kwargs} = {'executable_path': '/home/funnyfeb/developments/repos/ae-lab-cu/drivers/linux/chromedriver'}</msg>
+<status status="PASS" starttime="20210807 16:41:40.208" endtime="20210807 16:41:40.208"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>chrome_options=${chrome_options}</arg>
 <arg>kwargs=${kwargs}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20210803 15:11:07.582" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20210803 15:11:07.582" endtime="20210803 15:11:09.638"/>
+<msg timestamp="20210807 16:41:40.209" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20210807 16:41:40.208" endtime="20210807 16:41:41.496"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210803 15:11:09.639" level="INFO">Opening url 'https://automationplayground.github.io/playground/login.html'</msg>
-<status status="PASS" starttime="20210803 15:11:09.638" endtime="20210803 15:11:11.315"/>
+<msg timestamp="20210807 16:41:41.497" level="INFO">Opening url 'https://automationplayground.github.io/playground/login.html'</msg>
+<status status="PASS" starttime="20210807 16:41:41.496" endtime="20210807 16:41:41.944"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>url: ${url}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210803 15:11:11.316" endtime="20210803 15:11:11.317"/>
+<status status="PASS" starttime="20210807 16:41:41.944" endtime="20210807 16:41:41.945"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${speed}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20210803 15:11:11.317" endtime="20210803 15:11:11.317"/>
+<status status="PASS" starttime="20210807 16:41:41.945" endtime="20210807 16:41:41.945"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>speed: ${speed}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210803 15:11:11.318" endtime="20210803 15:11:11.318"/>
+<status status="PASS" starttime="20210807 16:41:41.946" endtime="20210807 16:41:41.946"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>------</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20210803 15:11:11.318" endtime="20210803 15:11:11.319"/>
+<status status="PASS" starttime="20210807 16:41:41.946" endtime="20210807 16:41:41.947"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210803 15:11:11.319" endtime="20210803 15:11:11.586"/>
+<status status="PASS" starttime="20210807 16:41:41.947" endtime="20210807 16:41:42.153"/>
 </kw>
-<status status="PASS" starttime="20210803 15:11:07.577" endtime="20210803 15:11:11.586"/>
+<status status="PASS" starttime="20210807 16:41:40.206" endtime="20210807 16:41:42.154"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.USERNAME}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:42.156" level="INFO">Typing text 'username' into text field 'id=inp_username'.</msg>
+<status status="PASS" starttime="20210807 16:41:42.155" endtime="20210807 16:41:42.665"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:42.667" level="INFO">Typing text 'P@ssw0rd' into text field 'id=inp_password'.</msg>
+<status status="PASS" starttime="20210807 16:41:42.665" endtime="20210807 16:41:43.180"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN.SUBMIT-BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:43.182" level="INFO">Clicking button 'xpath=/html/body/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20210807 16:41:43.181" endtime="20210807 16:41:43.953"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT.FIRST_NAME}</arg>
+<arg>${FIRSTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:43.955" level="INFO">Typing text 'John' into text field 'xpath=//input[@id='first-name']'.</msg>
+<status status="PASS" starttime="20210807 16:41:43.954" endtime="20210807 16:41:44.456"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT.LAST_NAME}</arg>
+<arg>${LASTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:44.457" level="INFO">Typing text 'Doe' into text field 'xpath=//input[@id='last-name']'.</msg>
+<status status="PASS" starttime="20210807 16:41:44.456" endtime="20210807 16:41:44.950"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${LIST.DOB.DATE}</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210807 16:41:44.952" level="INFO">Selecting options from selection list 'xpath=//select[@id='dBirth']' by value 3.</msg>
+<status status="PASS" starttime="20210807 16:41:44.951" endtime="20210807 16:41:45.812"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${LIST.DOB.MONTH}</arg>
+<arg>10</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210807 16:41:45.814" level="INFO">Selecting options from selection list 'xpath=//select[@id='mBirth']' by value 10.</msg>
+<status status="PASS" starttime="20210807 16:41:45.813" endtime="20210807 16:41:46.682"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${LIST.DOB.YEAR}</arg>
+<arg>1985</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20210807 16:41:46.684" level="INFO">Selecting options from selection list 'xpath=//select[@id='yBirth']' by value 1985.</msg>
+<status status="PASS" starttime="20210807 16:41:46.683" endtime="20210807 16:41:47.571"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${INPUT.STAFF_CARD}</arg>
+<arg>${FILE.STAFF_CARD}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20210807 16:41:47.574" level="INFO">Sending /home/funnyfeb/developments/repos/ae-lab-cu/resources/img/staff_card.png to browser.</msg>
+<status status="PASS" starttime="20210807 16:41:47.573" endtime="20210807 16:41:47.870"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${INPUT.ID_CARD}</arg>
+<arg>${FILE.ID_CARD}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20210807 16:41:47.872" level="INFO">Sending /home/funnyfeb/developments/repos/ae-lab-cu/resources/img/id_card.png to browser.</msg>
+<status status="PASS" starttime="20210807 16:41:47.870" endtime="20210807 16:41:48.178"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${CHECKBOX.1}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:48.180" level="INFO">Selecting checkbox 'xpath=//input[@id="agreement" and @name="cb1"]'.</msg>
+<status status="PASS" starttime="20210807 16:41:48.178" endtime="20210807 16:41:48.854"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${CHECKBOX.2}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:48.856" level="INFO">Selecting checkbox 'xpath=//input[@id="agreement" and @name="cb2"]'.</msg>
+<status status="PASS" starttime="20210807 16:41:48.855" endtime="20210807 16:41:49.536"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${FORM.SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210807 16:41:49.537" level="INFO">Clicking button 'xpath=//button[@class="confirm-btn"]'.</msg>
+<status status="PASS" starttime="20210807 16:41:49.536" endtime="20210807 16:41:50.169"/>
 </kw>
 <doc>คำสั่ง run Command : "robot -d results workspace/lab_ui/lab_ui.robot"</doc>
 <tag>CHROME</tag>
@@ -107,9 +194,9 @@
 <tag>POSITIVE</tag>
 <tag>test_lab2</tag>
 <tag>UI</tag>
-<status status="PASS" starttime="20210803 15:11:07.576" endtime="20210803 15:11:11.587"/>
+<status status="PASS" starttime="20210807 16:41:40.205" endtime="20210807 16:41:50.169"/>
 </test>
-<status status="PASS" starttime="20210803 15:11:07.234" endtime="20210803 15:11:11.588"/>
+<status status="PASS" starttime="20210807 16:41:40.071" endtime="20210807 16:41:50.172"/>
 </suite>
 <statistics>
 <total>
